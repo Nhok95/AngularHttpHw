@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,9 +14,6 @@ export class CategoriaService {
   // Implementación GET
 
   getCategorias():Observable<any>{
-
-    this.http.send()
-    
-    return null;
+    return this.http.get(this.URL);
   }
 }
