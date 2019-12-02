@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 
 // Services
 import { CategoriaService } from './services/categoria.service';
+import { CamareroService } from './services/camarero.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,10 @@ import { CategoriaService } from './services/categoria.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [CategoriaService],
+  providers: [
+    CategoriaService,
+    CamareroService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
