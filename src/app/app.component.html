@@ -1,5 +1,19 @@
-<h2> Lista de Categorias </h2>
+<h2>Añadir Producto</h2>
+nombre: <input [(ngModel)]="producto.nombre" name="nombre" type="text"><br>
+precio: <input [(ngModel)]="producto.precio" name="precio" type="number"  min="0"><br>
+descripcion: <input [(ngModel)]="producto.descripcion" name="desc" type="text"><br>
+fecha alta: <input [(ngModel)]="producto.fechaAlta" name="firstname" type="date"><br>
+descatalogado: <input [(ngModel)]="producto.descatalogado" name="descatalogado" type="checkbox"><br>
+categoria: <select [(ngModel)]="producto.categoria" name="categorias" >
+  <option *ngFor="let cat of categorias">{{cat}}</option>
+</select>
+<br><br>
 
+<button (click)="addProducto()"> Add </button>
+
+<br><br><hr><br><br>
+
+<h2> Lista de Categorias </h2>
 <ul *ngIf="categorias">
   <li *ngFor="let categoria of categorias">{{categoria}}</li>
 </ul>
